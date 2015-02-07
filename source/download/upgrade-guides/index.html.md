@@ -116,5 +116,5 @@ Don’t forget to restart apache after the configuration change:
 
 If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate [forum](https://community.openproject.org/projects/openproject/boards/9).
 
-Also, please take a look at the [Frequently Asked Questions](https://www.openproject.org/help/faq/upgrading-current-version-questions/ "Upgrading to the Current Version Questions").
+Also, please take a look at the [Frequently Asked Questions](/help/faq/upgrading-current-version-questions/ "Upgrading to the Current Version Questions").
 

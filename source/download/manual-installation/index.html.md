@@ -139,8 +139,8 @@ Now edit the `config/database.yml` file and insert your database credentials. It
       username: openproject
       password: openproject
       encoding: utf8
-    
-    
+
+
     development:
       adapter: mysql2
       database: openproject
@@ -347,5 +347,4 @@ If you need to restart the server (for example after a configuration change), do
 
 ## Questions, Comments, and Feedback
 
-If you have any further questions, comments, feedback, or an idea to enhance this guide, please take a look at the [Frequently Asked Questions](https://www.openproject.org/help/faq/manual-installation-questions/ "Manual Installation Questions")or tell us at the appropriate community [forum](https://community.openproject.org/projects/openproject/boards/9).&nbsp; [Follow OpenProject on twitter](https://twitter.com/openproject), and follow the news on [openproject.org](http://www.openproject.org/) to stay up to date.
-
+If you have any further questions, comments, feedback, or an idea to enhance this guide, please take a look at the [Frequently Asked Questions](/help/faq/manual-installation-questions/ "Manual Installation Questions")or tell us at the appropriate community [forum](https://community.openproject.org/projects/openproject/boards/9).&nbsp; [Follow OpenProject on twitter](https://twitter.com/openproject), and follow the news on [openproject.org](http://www.openproject.org/) to stay up to date.

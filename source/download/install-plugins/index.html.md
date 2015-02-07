@@ -4,8 +4,8 @@ OpenProject plug-ins are separated in ruby gems. You can install them by listing
 
     # Required by backlogs
     gem "openproject-pdf_export", git: "https://github.com/finnlabs/openproject-pdf_export.git", :branch => "stable"
-    
-    
+
+
     gem "openproject-backlogs", git: "https://github.com/finnlabs/openproject-backlogs.git", :branch => "stable"
 
 If you have modified the `Gemfile.plugins` file, always repeat the following steps of the OpenProject installation:
@@ -29,6 +29,5 @@ Note: plugins are only supported for the manual installation. The `Gemfile.plugi
 
 #### Find out&nbsp;more about OpenProject plugins
 
-- [Supported plugins](https://www.openproject.org/download/install-plugins/openproject-plugins/ "OpenProject Plugins")
-- [Community plugins](https://www.openproject.org/download/install-plugins/openproject-plugins/ "OpenProject Plugins")
-
+- [Supported plugins](/download/install-plugins/openproject-plugins/ "OpenProject Plugins")
+- [Community plugins](/download/install-plugins/openproject-plugins/ "OpenProject Plugins")
