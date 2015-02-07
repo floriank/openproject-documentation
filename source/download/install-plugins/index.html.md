@@ -2,11 +2,13 @@
 
 OpenProject plug-ins are separated in ruby gems. You can install them by listing them in a file called `Gemfile.plugins`. An example `Gemfile.plugins` file looks like this:
 
-    # Required by backlogs
-    gem "openproject-pdf_export", git: "https://github.com/finnlabs/openproject-pdf_export.git", :branch => "stable"
+```ruby
+  # Required by backlogs
+  gem "openproject-pdf_export", git: "https://github.com/finnlabs/openproject-pdf_export.git", :branch => "stable"
 
 
-    gem "openproject-backlogs", git: "https://github.com/finnlabs/openproject-backlogs.git", :branch => "stable"
+  gem "openproject-backlogs", git: "https://github.com/finnlabs/openproject-backlogs.git", :branch => "stable"
+```
 
 If you have modified the `Gemfile.plugins` file, always repeat the following steps of the OpenProject installation:
 

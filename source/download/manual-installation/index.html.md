@@ -132,22 +132,23 @@ Create and configure the database configuration file in `config/database.yml` (r
 
 Now edit the `config/database.yml` file and insert your database credentials. It should look like this (just with your database name, username, and password):
 
-    production:
-      adapter: mysql2
-      database: openproject
-      host: localhost
-      username: openproject
-      password: openproject
-      encoding: utf8
+```yaml
+  production:
+    adapter: mysql2
+    database: openproject
+    host: localhost
+    username: openproject
+    password: openproject
+    encoding: utf8
 
-
-    development:
-      adapter: mysql2
-      database: openproject
-      host: localhost
-      username: openproject
-      password: openproject
-      encoding: utf8
+  development:
+    adapter: mysql2
+    database: openproject
+    host: localhost
+    username: openproject
+    password: openproject
+    encoding: utf8
+```
 
 Configure email notifications (using a gmail account as an example) by creating configuration.yml in `config` directory.
 
@@ -155,19 +156,23 @@ Configure email notifications (using a gmail account as an example) by creating 
 
 Now, edit the `configuration.yml` file as you like.
 
-    production: #main level
-      email_delivery_method: :smtp #settings for the production environment
-      smtp_address: smtp.gmail.com
-      smtp_port: 587
-      smtp_domain: smtp.gmail.com
-      smtp_user_name: ***@gmail.com
-      smtp_password: ****
-      smtp_enable_starttls_auto: true
-      smtp_authentication: plain
+```yaml
+  production: #main level
+    email_delivery_method: :smtp #settings for the production environment
+    smtp_address: smtp.gmail.com
+    smtp_port: 587
+    smtp_domain: smtp.gmail.com
+    smtp_user_name: ***@gmail.com
+    smtp_password: ****
+    smtp_enable_starttls_auto: true
+    smtp_authentication: plain
+```
 
 Add this line into `configuration.yml` file at the of of file for better performance of OpenProject:
 
-    rails_cache_store: :memcache
+```yaml
+  rails_cache_store: :memcache
+```
 
 **NOTE:** You should validate your .yml-files, for example with [http://www.yamllint.com/](http://www.yamllint.com/). Both, the `database.yml` and`configuration.yml` file are sensitive to whitespace. It is pretty easy to write invalid .yml files without seeing the error. Validating those files prevents you from such errors.
 
@@ -203,27 +208,31 @@ Follow the instructions passenger provides. The passenger installer will ask you
 
 As told by the installer, add this lines to `/etc/apache2/apache2.conf`. But before copy&pasting the following lines, check if the content (especially the version numbers!) is the same as the `passenger-install-apache2-module` installer said. When you’re in doubt, do what passenger tells you.
 
-    LoadModule passenger_module /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
-    <IfModule mod_passenger.c>
-      PassengerRoot /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53
-      PassengerDefaultRuby /home/openproject/.rvm/gems/ruby-2.1.4/wrappers/ruby
-    </IfModule>
+```apache
+  LoadModule passenger_module /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+  <IfModule mod_passenger.c>
+    PassengerRoot /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53
+    PassengerDefaultRuby /home/openproject/.rvm/gems/ruby-2.1.4/wrappers/ruby
+  </IfModule>
+```
 
 As the root user, create the file `/etc/apache2/conf.d/openproject.conf` with the following contents:
 
-    <VirtualHost *:80>
-       ServerName www.myopenprojectsite.com
-       # !!! Be sure to point DocumentRoot to 'public'!
-       DocumentRoot /home/openproject/openproject/public
-       <Directory /home/openproject/openproject/public>
-          # This relaxes Apache security settings.
-          AllowOverride all
-          # MultiViews must be turned off.
-          Options -MultiViews
-          # Uncomment this if you're on Apache >= 2.4:
-          #Require all granted
-       </Directory>
-    </VirtualHost>
+```apache
+  <VirtualHost *:80>
+     ServerName www.myopenprojectsite.com
+     # !!! Be sure to point DocumentRoot to 'public'!
+     DocumentRoot /home/openproject/openproject/public
+     <Directory /home/openproject/openproject/public>
+        # This relaxes Apache security settings.
+        AllowOverride all
+        # MultiViews must be turned off.
+        Options -MultiViews
+        # Uncomment this if you're on Apache >= 2.4:
+        #Require all granted
+     </Directory>
+  </VirtualHost>
+```
 
 ### Only on Ubuntu
 
@@ -252,14 +261,18 @@ The passenger installer tells us to edit the apache config files. To do this, co
 
 As told by the installer, create the file `/etc/apache2/mods-available/passenger.load` and add the following line. But before copy&pasting the following lines, check if the content (especially the version numbers!) is the same as the `passenger-install-apache2-module` installer said. When you’re in doubt, do what passenger tells you.
 
-    LoadModule passenger_module /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+```apache
+  LoadModule passenger_module /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+```
 
 Then create the file `/etc/apache2/mods-available/passenger.conf` with the following contents (again, take care of the version numbers!):
 
-    <IfModule mod_passenger.c>
-      PassengerRoot /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53
-      PassengerDefaultRuby /home/openproject/.rvm/gems/ruby-2.1.4/wrappers/ruby
-    </IfModule>
+```apache
+  <IfModule mod_passenger.c>
+    PassengerRoot /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53
+    PassengerDefaultRuby /home/openproject/.rvm/gems/ruby-2.1.4/wrappers/ruby
+  </IfModule>
+```
 
 &nbsp;
 
@@ -269,19 +282,21 @@ Then run:
 
 As the root user, create the file `/etc/apache2/sites-available/openproject.conf` with the following contents:
 
-    <VirtualHost *:80>
-       ServerName www.myopenprojectsite.com
-       # !!! Be sure to point DocumentRoot to 'public'!
-       DocumentRoot /home/openproject/openproject/public
-       <Directory /home/openproject/openproject/public>
-          # This relaxes Apache security settings.
-          AllowOverride all
-          # MultiViews must be turned off.
-          Options -MultiViews
-          # Uncomment this if you're on Apache >= 2.4:
-          Require all granted
-       </Directory>
-    </VirtualHost>
+```apache
+  <VirtualHost *:80>
+     ServerName www.myopenprojectsite.com
+     # !!! Be sure to point DocumentRoot to 'public'!
+     DocumentRoot /home/openproject/openproject/public
+     <Directory /home/openproject/openproject/public>
+        # This relaxes Apache security settings.
+        AllowOverride all
+        # MultiViews must be turned off.
+        Options -MultiViews
+        # Uncomment this if you're on Apache >= 2.4:
+        Require all granted
+     </Directory>
+  </VirtualHost>
+```
 
 Let’s enable our new `openproject` site (and disable the default site, if necessary)
 

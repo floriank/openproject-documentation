@@ -30,14 +30,16 @@ to adapt your data to the database structure of your installed OpenProject versi
 
 Determine which Database you are using. You can find the relevant information in the`OPENPROJECT_DIRECTORY/config/database.yml` file. It looks similar to this:
 
-    production:
-      adapter: postgresql
-      database: openproject-production
-      host: localhost
-      username: my_postgres_user
-      password: my_secret_password
-      encoding: utf8
-      min_messages: warning
+```yaml
+  production:
+    adapter: postgresql
+    database: openproject-production
+    host: localhost
+    username: my_postgres_user
+    password: my_secret_password
+    encoding: utf8
+    min_messages: warning
+```
 
 Locate the database entry for your `production` database. If your `adapter` is `postgresql`, then you have a PostgreSQL database. If it is `mysql2`, you use a MySQL database. Now follow the steps for your database adapter.
 
@@ -99,4 +101,3 @@ If you have **not** changed the `attachment_storage_path` setting, all files wil
 
 You can manage Repositories with OpenProject — so one or more of your projects may have a repository. Please make sure to backup these too.  
 The path to a project’s repository can be found in the repository settings of the respective project (it can be individually defined for every project).
-

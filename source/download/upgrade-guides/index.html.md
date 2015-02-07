@@ -86,11 +86,13 @@ This sections only applies to you, if you serve OpenProject via Apache and Passe
 
 During the 3.0 installation, we have set-up Passenger in the Apache configuration files. During the OpenProject upgrade, we have potentially installed a new Ruby and Passenger Version. The versions of Ruby and Passenger appear in the Apache configuration like this:
 
-    LoadModule passenger_module /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
-    <IfModule mod_passenger.c>
-      PassengerRoot /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53
-      PassengerDefaultRuby /home/openproject/.rvm/gems/ruby-2.1.4/wrappers/ruby
-    </IfModule>
+```apache
+  LoadModule passenger_module /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+  <IfModule mod_passenger.c>
+    PassengerRoot /home/openproject/.rvm/gems/ruby-2.1.4/gems/passenger-4.0.53
+    PassengerDefaultRuby /home/openproject/.rvm/gems/ruby-2.1.4/wrappers/ruby
+  </IfModule>
+```
 
 Please run the following commands to upgrade passenger and re-install the Apache module:
 
@@ -117,4 +119,3 @@ Don’t forget to restart apache after the configuration change:
 If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate [forum](https://community.openproject.org/projects/openproject/boards/9).
 
 Also, please take a look at the [Frequently Asked Questions](/help/faq/upgrading-current-version-questions/ "Upgrading to the Current Version Questions").
-

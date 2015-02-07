@@ -19,7 +19,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Link: [Source](https://github.com/finnlabs/openproject-backlogs)
 - Dependency:&nbsp;PDF Export
 
-    gem "openproject-backlogs", :git => "https://github.com/finnlabs/openproject-backlogs.git", :branch => 'stable'
+```ruby
+  gem "openproject-backlogs", :git => "https://github.com/finnlabs/openproject-backlogs.git", :branch => 'stable'
+```
 
 ### Cost
 
@@ -27,7 +29,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Author:&nbsp; [Finnlabs](http://www.finn.de/)
 - Link: [Source](https://github.com/finnlabs/openproject-costs)
 
-    gem 'openproject-costs', :git => 'https://github.com/finnlabs/openproject-costs.git', :branch => 'stable'
+```ruby
+  gem 'openproject-costs', :git => 'https://github.com/finnlabs/openproject-costs.git', :branch => 'stable'
+```
 
 ### Global Roles
 
@@ -36,7 +40,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Link: [Source](https://github.com/finnlabs/openproject-global_roles)
 - Dependency:
 
-    gem 'openproject-global_roles', :git => 'https://github.com/finnlabs/openproject-global_roles.git', :branch => 'stable'
+```ruby
+  gem 'openproject-global_roles', :git => 'https://github.com/finnlabs/openproject-global_roles.git', :branch => 'stable'
+```
 
 ### Help Link
 
@@ -44,7 +50,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Author:&nbsp; [Finnlabs](http://www.finn.de/)
 - Link: [Source](https://github.com/finnlabs/openproject-help_link)
 
-    gem 'openproject-help_link', :git => 'https://github.com/finnlabs/openproject-help_link.git', :branch => 'stable'
+```ruby
+  gem 'openproject-help_link', :git => 'https://github.com/finnlabs/openproject-help_link.git', :branch => 'stable'
+```
 
 ### Meeting
 
@@ -52,7 +60,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Author:&nbsp; [Finnlabs](http://www.finn.de/)
 - Link: [Source](https://github.com/finnlabs/openproject-meeting)
 
-    gem 'openproject-meeting', :git => 'https://github.com/finnlabs/openproject-meeting.git', :branch => 'stable'
+```ruby
+  gem 'openproject-meeting', :git => 'https://github.com/finnlabs/openproject-meeting.git', :branch => 'stable'
+```
 
 ### My Project Page
 
@@ -60,7 +70,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Author:&nbsp; [Finnlabs](http://www.finn.de/)
 - Link: [Source](https://github.com/finnlabs/openproject-my_project_page)
 
-    gem 'openproject-my_project_page', :git => 'https://github.com/finnlabs/openproject-my_project_page.git', :branch => 'stable'
+```ruby
+  gem 'openproject-my_project_page', :git => 'https://github.com/finnlabs/openproject-my_project_page.git', :branch => 'stable'
+```
 
 ### PDF Export
 
@@ -69,7 +81,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Link: [Source](https://github.com/finnlabs/openproject-pdf_export)
 - Dependency: Backlogs
 
-    gem 'openproject-pdf_export', :git => 'https://github.com/finnlabs/openproject-pdf_export.git', :branch => 'stable'
+```ruby
+  gem 'openproject-pdf_export', :git => 'https://github.com/finnlabs/openproject-pdf_export.git', :branch => 'stable'
+```
 
 ### Documents
 
@@ -77,7 +91,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Author:&nbsp; [OpenProject Foundation](https://www.openproject.org/projects/openproject/wiki/OpenProject_Foundation)
 - Link: [Source](https://github.com/opf/openproject-documents)
 
-    gem 'openproject-documents', :git => 'https://github.com/opf/openproject-documents.git', :branch => 'stable'
+```ruby
+  gem 'openproject-documents', :git => 'https://github.com/opf/openproject-documents.git', :branch => 'stable'
+```
 
 ### Reporting
 
@@ -86,7 +102,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Link: [Source](https://github.com/finnlabs/openproject-reporting)
 - Dependency: Costs
 
-    gem 'reporting_engine', :git => 'https://github.com/finnlabs/reporting_engine.git', :branch => 'stable'
+```ruby
+  gem 'reporting_engine', :git => 'https://github.com/finnlabs/reporting_engine.git', :branch => 'stable'
+```
 
 ### Translations
 
@@ -94,7 +112,9 @@ Supported plugins are compatible with the current OpenProject version.
 - Author:&nbsp; [OpenProject Foundation](https://www.openproject.org/projects/openproject/wiki/OpenProject_Foundation)
 - Link: [Source](https://github.com/opf/openproject-translations)
 
-    gem 'openproject-translations', :git => 'https://github.com/opf/openproject-translations.git', :branch => 'stable'
+```ruby
+  gem 'openproject-translations', :git => 'https://github.com/opf/openproject-translations.git', :branch => 'stable'
+```
 
 ## Community Plugins
 
@@ -108,7 +128,9 @@ Please keep in mind that it can not always be guaranteed that they are compatibl
 - Author:&nbsp; [Oliver Günther](https://github.com/oliverguenther)
 - Link: [Source](https://github.com/oliverguenther/openproject-auto_project)
 
-    gem "openproject-auto_project", :git => "https://github.com/oliverguenther/openproject-auto_project.git", :branch => 'stable'
+```ruby
+  gem "openproject-auto_project", :git => "https://github.com/oliverguenther/openproject-auto_project.git", :branch => 'stable'
+```
 
 ### Emoji
 
@@ -117,7 +139,9 @@ Please keep in mind that it can not always be guaranteed that they are compatibl
 - Link: [Source](https://github.com/tessi/openproject-emoji)
 - Dependency:
 
-    gem 'openproject-emoji',:git => 'https://github.com/tessi/openproject-emoji.git', :branch => 'stable'
+```ruby
+  gem 'openproject-emoji',:git => 'https://github.com/tessi/openproject-emoji.git', :branch => 'stable'
+```
 
 ### Ensure Project Hierarchy
 
@@ -125,7 +149,9 @@ Please keep in mind that it can not always be guaranteed that they are compatibl
 - Author:&nbsp; [Oliver Günther](https://github.com/oliverguenther)
 - Link: [Source](https://github.com/oliverguenther/openproject-ensure_project_hierarchy)
 
-    gem "openproject-ensure_project_hierarchy", :git => "https://github.com/oliverguenther/openproject-ensure_project_hierarchy.git", :branch => 'stable'
+```ruby
+  gem "openproject-ensure_project_hierarchy", :git => "https://github.com/oliverguenther/openproject-ensure_project_hierarchy.git", :branch => 'stable'
+```
 
 ## Plugins in development (potentially unstable)
 
@@ -135,9 +161,10 @@ Please keep in mind that it can not always be guaranteed that they are compatibl
 - Author:&nbsp; [Oliver Günther](https://github.com/oliverguenther)
 - Link: [Source](https://github.com/oliverguenther/openproject-revisions_git)
 
-    gem "openproject-git_hosting", :git => "https://github.com/oliverguenther/openproject-git_hosting.git", :branch => "dev"
+```ruby
+  gem "openproject-git_hosting", :git => "https://github.com/oliverguenther/openproject-git_hosting.git", :branch => "dev"
+```
 
 &nbsp;
 
 &nbsp;
-
