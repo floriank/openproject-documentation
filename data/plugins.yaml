@@ -1,0 +1,131 @@
+-
+  type:         supported
+  name:         Backlogs
+  gem_name:     openproject-backlogs
+  description:  Features for agile teams
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-backlogs
+  dependency:   PDF Export
+
+-
+  type:         supported
+  name:         Cost
+  gem_name:     openproject-costs
+  description:  Features for planning and tracking project costs
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-costs
+
+-
+  type:         supported
+  name:         Global Roles
+  gem_name:     openproject-global_roles
+  description:  Allows users to create top-level projects
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-global_roles
+  dependency:
+
+-
+  type:         supported
+  name:         Help Link
+  gem_name:     openproject-help_link
+  description:  Allows to provide an alternative help link
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-help_link
+
+-
+  type:         supported
+  name:         Meeting
+  gem_name:     openproject-meeting
+  description:  Features to schedule, prepare, and hold meetings
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-meeting
+
+-
+  type:         supported
+  name:         My Project Page
+  gem_name:     openproject-my_project_page
+  description:  Enables customization of a project’s overview page
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-my_project_page
+
+-
+  type:         supported
+  name:         PDF Export
+  gem_name:     openproject-pdf_export
+  description:  Enables story card export for OpenProject Backlogs
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-pdf_export
+  dependency:   Backlogs
+
+-
+  type:         supported
+  name:         Documents
+  gem_name:     openproject-documents
+  description:  Allows adding documents to projects
+  author_name:  OpenProject Foundation
+  author_url:   https://www.openproject.org/projects/openproject/wiki/OpenProject_Foundation
+  repo_url:     https://github.com/opf/openproject-documents
+
+-
+  type:         supported
+  name:         Reporting
+  gem_name:     reporting_engine
+  description:  Customized cost reporting features
+  author_name:  Finnlabs
+  author_url:   http://www.finn.de/
+  repo_url:     https://github.com/finnlabs/openproject-reporting
+  dependency:   Costs
+
+-
+  type:         supported
+  name:         Translations
+  gem_name:     openproject-translations
+  description: |-
+    Adds user contributed languages to your OpenProject installation.
+    All translations come from&nbsp; [our crowdin project](https://crowdin.net/project/openproject)
+  author_name: OpenProject Foundation
+  author_url:   https://www.openproject.org/projects/openproject/wiki/OpenProject_Foundation
+  repo_url:     https://github.com/opf/openproject-translations
+
+-
+  type:         community
+  name:         Auto Project
+  gem_name:     openproject-auto_project
+  description:  Creates a project whenever a user is added
+  author_name:  Oliver Günther
+  author_url:   https://github.com/oliverguenther
+  repo_url:     https://github.com/oliverguenther/openproject-auto_project
+
+-
+  type:         community
+  name:         Emoji
+  gem_name:     openproject-emoji
+  description:  Adds emojis (emoticon) support to OpenProject
+  author_name:  Philipp Tessenow
+  author_url:   https://github.com/tessi
+  repo_url:     https://github.com/tessi/openproject-emoji
+
+-
+  type:         community
+  name:         Ensure Project Hierarchy
+  gem_name:     openproject-ensure_project_hierarchy
+  description:  Ensures subproject identifiers are prefixed with their parent project’s identifier
+  author_name:  Oliver Günther
+  author_url:   https://github.com/oliverguenther
+  repo_url:     https://github.com/oliverguenther/openproject-ensure_project_hierarchy
+
+-
+  type:         in_development
+  name:         OpenProject Git Hosting
+  gem_name:     openproject-git_hosting
+  description:  Provides extensive features for managing Git repositories within OpenProject
+  author_name:  Oliver Günther
+  author_url:   https://github.com/oliverguenther
+  repo_url:     https://github.com/oliverguenther/openproject-revisions_git

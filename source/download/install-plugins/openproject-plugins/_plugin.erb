@@ -1,0 +1,16 @@
+<%- markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, fenced_code_blocks: true, smartypants: true) %>
+
+<h3><%= plugin.name %></h3>
+
+<ul>
+  <li>Description: <%= markdown.render plugin.description %></li>
+  <li>Author: <%= link_to plugin.author_name, plugin.author_url, class: 'external' %></li>
+  <li>Link: <%= link_to 'Source', plugin.repo_url %></li>
+  <%- if plugin.dependency %>
+    <li>Dependency: <%= Array(plugin.dependency).join(', ') %></li>
+  <%- end %>
+</ul>
+
+<% code("ruby") do %>
+gem '<%= plugin.gem_name %>', git: '<%= plugin.repo_url %>', branch: 'stable'
+<% end %>
